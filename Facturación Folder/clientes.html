@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="preload" as="style" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" as="style" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="clientes">
+
+    <header class="contenedor header-flex">
+
+        <h1>Facturación</h1>
+
+        <h2>Clientes</h2>
+
+        <nav class="enlaces">
+            <a href="vendedores.html" class="form-btn btn-verde">Vendedores</a>
+            <a href="productos.html" class="form-btn btn-verde">Productos</a>
+            <a href="index.html" class="form-btn volver-btn">Inicio</a>
+        </nav>
+
+    </header>
+
+    <section class="contenedor panel flex">
+
+        <div class="msj"></div>
+        
+        <form class="formulario formulario-crear azul">
+
+            <fieldset>
+
+                <h4 class="subtitulo-crear">Crear</h4>
+
+                <div class="div-input">
+                    <label for="nombreInput">Nombre</label>
+                    <input type="text" id="nombreInput" placeholder="Nombre Cliente" autocomplete="off">
+                </div>
+
+                <div class="div-input">
+                    <label for="direccionInput">Dirección</label>
+                    <textarea id="direccionInput"></textarea>
+                </div>
+
+                <div class="div-input">
+                    <label for="rifInput">Rif Cliente</label>
+                    <input type="text" id="rifInput" placeholder="Rif" autocomplete="off">
+                </div>
+
+                <div class="div-input">
+                    <label for="codigoInput">Código Cliente</label>
+                    <input type="text" id="codigoInput" placeholder="Código" autocomplete="off">
+                </div>
+
+                <div class="div-input">
+                    <label for="telefonoInput">Teléfono</label>
+                    <input type="text" id="telefonoInput" placeholder="Ejemplo: 0000-000-0000" autocomplete="off">
+                </div>
+
+                <div class="separar-contenido">
+                    <button class="form-btn crear-form-registro">Crear</button>
+                </div>
+
+            </fieldset>
+
+            <div class="contenedor-lista">
+                <h4 class="subtitulo-crear">Lista de Clientes</h4>
+
+                <div class="lista">
+
+                    <!--
+                    <div class="registro">
+                        <p class="nombre mayuscula">INVERSIONES SOBRE BOUTIQUE 2022, C.A</p>
+                        <div class="botones">
+                            <button class="editar btn">Editar</button>
+                            <button class="eliminar btn">Eliminar</button>
+                        </div>
+                    </div>
+                    -->
+
+                </div>
+            </div>
+
+        </form>
+    </section> 
+
+
+    <script src="js/funcionescrud.js"></script>
+    <script src="js/clientes.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturación</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="preload" as="style" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" as="style" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="index">
+
+    <header class="contenedor header-flex">
+        <h1>Facturación</h1>
+        <nav class="enlaces">
+            <button class="form-btn eliminar eliminar-db">Eliminar BD</button>
+            <a href="vendedores.html" class="form-btn btn-verde">Vendedores</a>
+            <a href="productos.html" class="form-btn btn-verde">Productos</a>
+            <a href="clientes.html" class="form-btn btn-verde">Clientes</a>
+        </nav>
+    </header>
+
+    <section class="contenedor panel">
+
+        <div class="msj"></div>
+
+        <form class="formulario morado">
+
+            <fieldset class="detalles">
+                <h4 class="subtitulo-factura">Detalles</h4>
+                
+                <div>
+                    <div class="div-input">
+                        <label for="nombre-cliente">Nombre Cliente</label>
+                        <input type="text" id="nombre-cliente" placeholder="Nombre del Cliente" autocomplete="off">
+                    </div>
+                    <ul class="resetear-lista" id="resultados-clientes"></ul>
+                </div>
+
+                <div class="div-input">
+                    <label for="vendedor">Vendedor/a</label>
+                    <select id="vendedor">
+                        <option value="" selected disabled>-- Seleccione --</option>
+                    </select>
+                </div>
+                <div class="div-input">
+                    <label for="notaEntrega">Nota de Entrega</label>
+                    <input type="text" id="notaEntrega" placeholder="Nota Entrega" autocomplete="off">
+                </div>
+                <div class="div-input">
+                    <label for="fecha">Fecha de Entrega</label>
+                    <input type="date" id="fecha">
+                </div>
+
+                <div class="separar-contenido">
+                    <button class="form-btn reiniciar-form">Reiniciar</button>
+                    <a href="resultado.html" class="form-btn resultado-form">Ver Resultado</a>
+                    <button class="form-btn crear-form">Crear</button>
+                </div>
+            </fieldset>
+
+            <fieldset class="productos">
+                <h4 class="subtitulo-factura">Productos</h4>
+
+                <div id="lista-productos">
+                    <!--
+                    <div class="producto">
+                        <div>
+                            <div class="div-input">
+                                <label for="nombre-producto">Descripción</label>
+                                <input type="text" id="nombre-producto" autocomplete="off">
+                            </div>
+                            <ul class="resetear-lista" id="resultados-productos"></ul>
+                        </div>
+                        <div class="div-input">
+                            <label for="precio">Precio Unitario</label>
+                            <input type="number" id="precio" min="1">
+                        </div>
+                        <div class="div-input">
+                            <label for="cantidad">Cantidad</label>
+                            <input type="number" id="cantidad" min="1">
+                        </div>
+                    </div>
+                    -->
+                </div>
+
+                <div class="botones centrar-contenido">
+                    <button class="btn eliminar-btn" title="Eliminar último">-</button>
+                    <button class="btn agregar-btn" title="Agregar">+</button>
+                </div>
+            </fieldset>
+
+        </form>
+    </section>
+
+
+    <script src="js/funcionescrud.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
